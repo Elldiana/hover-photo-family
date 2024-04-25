@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Hover Effect Mousemove</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <ul>
+        <li><a href="#">Kyial</a><img src="img/k.jpeg" class="image"></li>
+        <li><a href="#">Diana</a><img src="img/di.jpeg" class="image"></li>
+        <li><a href="#">Aidai</a><img src="img/ej.jpeg" class="image"></li>
+        <li><a href="#">Ayjarkyn</a><img src="img/aij.jpeg" class="image"></li>
+        <li><a href="#">Aysalkyn</a><img src="img/aisa.jpeg" class="image"></li>
+        <li><a href="#">Yasina</a><img src="img/aisa.jpeg" class="image"></li>
+    </ul>
+
+    <script>
+        let image = document.querySelectorAll('.image');
+        function showImage(e){
+            for(var i = 0; i < image.length; i++){
+                x = e.pageX;
+                y = e.pageY;
+                image[i].style.transform = `translate(${x}px, ${y}px)`;
+
+            }
+        }
+        document.addEventListener('mousemove',showImage);
+    </script>
+</body>
+</html>
